@@ -1,14 +1,23 @@
 # VULNSIGHT-V2 Remediation Dockerfile
+# Complete replacement — copy to your repository and re-scan
+
+# VULNSIGHT-V2 Remediation Dockerfile
 # Security-hardened — copy to your repository and re-scan
 
-FROM python:3.12.11-slim-bookworm
+FROM python:3.12.11-slim-bookworm.11-slim-bookworm
+
+RUN apt-get update && \
+    apt-get upgrade -y && \
+    rm -rf /var/lib/apt/lists/*
+
 
 LABEL maintainer="security-team" version="1.0"
 
 WORKDIR /app
 
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
 
 COPY app.py .
 
