@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - QuickCart</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">Q</span>
+                QuickCart
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li>
+                    <a href="#" class="nav-cart cart-toggle">
+                        <span class="cart-icon">🛒</span>
+                        Cart
+                        <span id="cart-count" class="cart-badge">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Our Products</h1>
+        <p>Browse our curated collection of premium electronics</p>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div id="products-grid" class="products-grid"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 QuickCart. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <div id="cart-sidebar-overlay" class="cart-sidebar-overlay"></div>
+    <aside id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-sidebar-header">
+            <h2>Your Cart</h2>
+            <button id="sidebar-close" class="sidebar-close" aria-label="Close cart">&times;</button>
+        </div>
+        <div id="sidebar-empty" class="cart-sidebar-empty">
+            <p>Your cart is empty</p>
+            <a href="products.html" class="btn btn-primary" style="margin-top: 16px;">Shop Now</a>
+        </div>
+        <div id="sidebar-cart-items" class="cart-sidebar-items"></div>
+        <div id="sidebar-footer" class="cart-sidebar-footer" style="display: none;">
+            <div class="sidebar-total">
+                <span>Total</span>
+                <span id="sidebar-total">₹0</span>
+            </div>
+            <a href="checkout.html" class="btn btn-primary">Checkout</a>
+            <a href="cart.html" class="btn btn-outline">View Full Cart</a>
+        </div>
+    </aside>
+
+    <script src="js/cart.js"></script>
+    <script src="js/products.js"></script>
+</body>
+</html>
