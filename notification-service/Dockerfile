@@ -21,4 +21,3 @@ USER appuser
 
 CMD ["gunicorn", "--bind", "0.0.0.0:5004", "--workers", "2", "app:app"]
 HEALTHCHECK --interval=30s --timeout=5s --retries=3 CMD python -c "import sys; sys.exit(0)"
-Co
